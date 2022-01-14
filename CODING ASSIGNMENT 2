@@ -1693,7 +1693,1184 @@ public class Garden {
 
 
 // LIM HUI QI ()
+package assignment2;
 
+import java.util.Scanner;
+
+public class Coding {
+
+	private static Scanner scan;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String name;
+		String hpNum;
+		String email;
+		String camera="";
+		String acs="";
+		String deliveryTo = "";
+		int warranty;
+		double priceCam = 0;
+		double priceAcs = 0;
+		double priceWty = 0;
+		double total;
+		double deliveryFee=0;
+		double protectionFee;
+		int discount = 0;
+		int menuChoice;
+		int cameraChoice;
+		int typeChoice;
+		int brandChoice;
+		int priceChoice;
+		char protectionC;
+		char buyCam;
+		char buyAcs;
+		int camC;
+		int acsC;
+		int deliC;
+		
+		scan = new Scanner(System.in);
+		
+		System.out.print("Please enter your name: ");
+		name = scan.next();
+		System.out.print("Please enter your contact number: ");
+		hpNum = scan.next();
+		System.out.print("Please enter your email: ");
+		email = scan.next();
+		
+		System.out.println(" 	              _____             ");
+		System.out.println("  	     ___     / [X] \\    _____    ");
+		System.out.println("	 __.|___|.__/_______\\__-LLLLL-__");
+		System.out.println("	/                               \\");
+		System.out.println("	|===============================|");
+		System.out.println("	|            .-'''-.     [__]   |");
+		System.out.println("	|           /.\"\"\"\"\".\\           |");
+		System.out.println("	|          // /\" \"\\ \\\\_)        |");
+		System.out.println("	|          \\\\ \\___/ //          |");
+		System.out.println("	|           \\`.___.'/           |");
+		System.out.println("	|============`-...-' ===========|");
+		System.out.println("	\\@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@/");
+		System.out.println();
+		System.out.println("########## WELCOME TO THE SHOTKIT SHOP ##########");
+		System.out.println();
+		
+		System.out.println("---------------------MENU------------------------");
+		System.out.println("1 Cameras Description List");
+		System.out.println("2 Accessories List");
+		System.out.println("3 Delivery and Warranty List");
+		System.out.println("4 Discount / Free Gift List");
+		System.out.println("5 To Buy");
+		System.out.println("6 Exit");
+		System.out.print("Please select a menu option: ");
+		menuChoice = scan.nextInt();
+		System.out.println("");
+		
+		switch(menuChoice)
+		{
+		case 1:
+			System.out.println("===================CAMERA LISTS====================");
+			System.out.println("What you consider when purchasing a camera?");
+			System.out.println("1 Camera's Type");
+			System.out.println("2 Camera's Brand");
+			System.out.println("3 Camera's Price");
+			System.out.print("Please select an option: ");
+			cameraChoice = scan.nextInt();
+			System.out.println();
+			
+			switch(cameraChoice)
+			{
+			case 1: 
+				System.out.println("----------------Camera's Type-----------------");
+				System.out.println("1 Compact camera");
+				System.out.println("2 Mirrorless camera");
+				System.out.println("3 Digital single-lens reflex camera(DSLR)");
+				System.out.print("Please select an option: ");
+				typeChoice = scan.nextInt();
+				System.out.println();
+				
+				switch(typeChoice)
+				{
+				case 1:
+					System.out.println("******************* Compact Type Camera ********************");
+					System.out.println("////////////////////////////////////////////////////////////");
+					System.out.println("Brand		: Canon");
+					System.out.println("Camera		: G7X_Mark_II");
+					System.out.println("Price		: RM 1779");
+					System.out.println("Features	: - Versatile Zoom Range");
+					System.out.println("		: - Robust Body");
+					System.out.println("		: - Good in LowLight");
+					System.out.println("		: - Great Image Quality");
+					System.out.println("		: - 20.1 Megapixel CMOS sensor ");
+					System.out.println("		: - New DIGIC 7 Imaging Processor");
+					System.out.println("Weight		: 302g");
+					System.out.println("Type		: Compact");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: FujiFilm");
+					System.out.println("Camera		: X-T30");
+					System.out.println("Price		: RM 3379");
+					System.out.println("Features	: - Great Value for Money");
+					System.out.println("		: - Robust Body");
+					System.out.println("		: - Amazing Autofocus");
+					System.out.println("		: - Excellent Image Quality");
+					System.out.println("		: - Improved Low-Light Perfomance");
+					System.out.println("		: - 26.1MP BSI APS-C X-Trans CMOS 4 image sensor");
+					System.out.println("		: - X-Processor 4 quad-core CPU");
+					System.out.println("Weight		: 383g");
+					System.out.println("Type		: Compact");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: Leica");
+					System.out.println("Camera		: Q2");
+					System.out.println("Price		: RM 25260");
+					System.out.println("Features	: - Ultimate Image Quality");
+					System.out.println("		: - Beautiful Design");
+					System.out.println("		: - Best EVF/Screen");
+					System.out.println("		: - 47.3 Megapixel full frame sensor");
+					System.out.println("Weight		: 718g");
+					System.out.println("Type		: Compact");
+					System.out.println("////////////////////////////////////////////////////////////");
+					System.out.println();
+					break;
+
+				case 2:
+
+					System.out.println("***************** Mirrorless Type Camera *******************");
+					System.out.println("////////////////////////////////////////////////////////////");
+					System.out.println("Brand		: Canon");
+					System.out.println("Camera		: M200");
+					System.out.println("Price		: RM 1999");
+					System.out.println("Features	: - cost effective");
+					System.out.println("		: - Easy to use");
+					System.out.println("		: - novice camera");
+					System.out.println("		: - 24.1MP APS-C CMOS Sensor");
+					System.out.println("		: - DIGIC 8 Image Processor");
+					System.out.println("		: - Weight: 262g");
+					System.out.println("Weight		: 262g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: Canon");
+					System.out.println("Camera		: M50");
+					System.out.println("Price		: RM 2949");
+					System.out.println("Features	: - Compact");
+					System.out.println("		: - Easy to use");
+					System.out.println("		: - Built-in Electronic Viewfinder");
+					System.out.println("		: - Fast & Accurate");
+					System.out.println("		: - 24.1Megapixel APS-C CMOS sensor ");
+					System.out.println("		: - DIGIC 8 Image Processor");
+					System.out.println("		: - Weight: 387g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: Sony");
+					System.out.println("Camera		: A6000");
+					System.out.println("Price		: RM 2199");
+					System.out.println("Features	: - Hybrid AF");
+					System.out.println("		: - Tilting LCD");
+					System.out.println("		: - Up to 11 FPS Continuous Shooting");
+					System.out.println("		: - Compact");
+					System.out.println("		: - 24.2MP full frame image sensor");
+					System.out.println("		: - BIONZ X Image Processor");
+					System.out.println("		: - Weight: 344g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+
+					System.out.println("Brand		: Sony");
+					System.out.println("Camera		: A6000");
+					System.out.println("Price		: RM 2199");
+					System.out.println("Features	: - Hybrid AF");
+					System.out.println("		: - Tilting LCD");
+					System.out.println("		: - Up to 11 FPS Continuous Shooting");
+					System.out.println("		: - Compact");
+					System.out.println("		: - 24.2MP full frame image sensor");
+					System.out.println("		: - BIONZ X Image Processor");
+					System.out.println("		: - Weight: 344g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: Sony");
+					System.out.println("Camera		: A6400");
+					System.out.println("Price		: RM 3899");
+					System.out.println("Features	: - Tracking focus");
+					System.out.println("		: - Metal body");
+					System.out.println("		: - strong battery life");
+					System.out.println("		: - 24MP APS-C sensor");
+					System.out.println("		: - New Bionz X processor");
+					System.out.println("		: - Weight: 396g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+
+					System.out.println("Brand		: Sony");
+					System.out.println("Camera		: A7 III");
+					System.out.println("Price		: RM 8588.90");
+					System.out.println("Features	: - AF supports A-mount Lenses");
+					System.out.println("		: - New Sensor, Evolved Processor");
+					System.out.println("		: - Continuous Shooting");
+					System.out.println("		: - 693 Phase-detection");
+					System.out.println("		: - Advanced 24.2MP BSI full frame Image Sensor w/ 1.8X readout speed");
+					System.out.println("		: - BIONZ X Image Processor ");
+					System.out.println("		: - Weight: 650g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: FujiFilm");
+					System.out.println("Camera		: X-A7");
+					System.out.println("Price		: RM 2999");
+					System.out.println("Features	: - Film mode");
+					System.out.println("		: - retro look");
+					System.out.println("		: - HD picture quality");
+					System.out.println("		: - 24.2 Megapixel APS-C CMOS sensor");
+					System.out.println("		: - Weight: 271g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: FujiFilm");
+					System.out.println("Camera		: X100V");
+					System.out.println("Price		: RM 5899");
+					System.out.println("Features	: - Iconic Design");
+					System.out.println("		: - Amazing Lens Quality");
+					System.out.println("		: - Hybrid Viewfinder");
+					System.out.println("		: - Compact size");
+					System.out.println("		: - 26.1MP X-Trans CMOS 4 sensor");
+					System.out.println("		: - X-Processor 4 Image Processor");
+					System.out.println("		: - Weight: 478g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+
+					System.out.println("Brand		: Leica");
+					System.out.println("Camera		: M10");
+					System.out.println("Price		: RM 27352");
+					System.out.println("Features	: - pared-down physical design");
+					System.out.println("		: - Rear LCD monitor");
+					System.out.println("		: - slimmest camera body");
+					System.out.println("		: - 24MP Full-Frame CMOS Sensor");
+					System.out.println("		: - Leica Maestro II Image Processor");
+					System.out.println("		: - Weight: 660g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					break;
+					
+				case 3:
+
+					System.out.println("******************** DSLR Type Camera **********************");
+					System.out.println("////////////////////////////////////////////////////////////");
+					System.out.println("Brand		: Canon");
+					System.out.println("Camera		: 90D");
+					System.out.println("Price		: RM 4599");
+					System.out.println("Features	: - Great Image Quality");
+					System.out.println("		: - High-speed Continuous Shooting");
+					System.out.println("		: - Multi-controller Customization");
+					System.out.println("		: - Versatile");
+					System.out.println("		: - 32.5 Megapixel CMOS (APS-C) sensor");
+					System.out.println("		: - DIGIC 8 image processor");
+					System.out.println("		: - Weight: 701g");
+					System.out.println("Type		: DSLR");
+					System.out.println("////////////////////////////////////////////////////////////");
+
+					System.out.println("Brand		: Nikon");
+					System.out.println("Camera		: D5600 DX");
+					System.out.println("Price		: RM 2229");
+					System.out.println("Features	: - Exceptional Image Quality");
+					System.out.println("		: - Intuitive Controls");
+					System.out.println("		: - Great Battery Life");
+					System.out.println("		: - SnapBridge");
+					System.out.println("		: - 24.2MP DX format CMOS sensor");
+					System.out.println("		: - Ex peed 4 image processor");
+					System.out.println("		: - Weight: 465g");
+					System.out.println("Type		: DSLR");
+					System.out.println("////////////////////////////////////////////////////////////");					
+					System.out.println("Brand		: Nikon");
+					System.out.println("Camera		: D750");
+					System.out.println("Price		: RM 5090");
+					System.out.println("Features	: - Vari-angle LCD Display");
+					System.out.println("		: - Compact & Lightweight");
+					System.out.println("		: - Powerful 51-point AF");
+					System.out.println("		: - HD Video Capabilities");
+					System.out.println("		: - 24.3 Megapixel CMOS image sensor");
+					System.out.println("		: - expeed 4 image processor");
+					System.out.println("		: - Weight: 750g");
+					System.out.println("Type		: DSLR");
+					System.out.println("////////////////////////////////////////////////////////////");
+					System.out.println("Brand		: Nikon");
+					System.out.println("Camera		: D850");
+					System.out.println("Price		: RM 9099");
+					System.out.println("Features	: - Extraordinary Resolution");
+					System.out.println("		: - Outstanding Battery Performance");
+					System.out.println("		: -Tilting Touchscreen");
+					System.out.println("		: - Outstanding Dynamic Range");
+					System.out.println("		: - 45.7 megapixels of extraordinary resolution");
+					System.out.println("		: - back side illuminated (BSI) full frame image sensor");
+					System.out.println("		: - Weight: 915g");
+					System.out.println("Type		: DSLR");
+					System.out.println("////////////////////////////////////////////////////////////");
+					break;
+					
+				default: 
+					System.out.println("Invalid number! Please try again. Thank you~");
+
+				}
+				break;
+				
+			case 2:
+				System.out.println("--------------Camera's Brand---------------");
+				System.out.println("1 Canon");
+				System.out.println("2 Nikon");
+				System.out.println("3 FujiFilm");
+				System.out.println("4 Sony");
+				System.out.println("5 Leica");	
+				System.out.print("Please select an option: ");
+				brandChoice = scan.nextInt();
+				System.out.println();
+				
+				switch(brandChoice)
+				{
+				case 1:
+
+					System.out.println("************************** CANON ***************************");
+					System.out.println("////////////////////////////////////////////////////////////");
+					System.out.println("Brand		: Canon");
+					System.out.println("Camera		: G7X_Mark_II");
+					System.out.println("Price		: RM 1779");
+					System.out.println("Features	: - Versatile Zoom Range");
+					System.out.println("		: - Robust Body");
+					System.out.println("		: - Good in LowLight");
+					System.out.println("		: - Great Image Quality");
+					System.out.println("		: - 20.1 Megapixel CMOS sensor ");
+					System.out.println("		: - New DIGIC 7 Imaging Processor");
+					System.out.println("Weight		: 302g");
+					System.out.println("Type		: Compact");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: Canon");
+					System.out.println("Camera		: M200");
+					System.out.println("Price		: RM 1999");
+					System.out.println("Features	: - cost effective");
+					System.out.println("		: - Easy to use");
+					System.out.println("		: - novice camera");
+					System.out.println("		: - 24.1MP APS-C CMOS Sensor");
+					System.out.println("		: - DIGIC 8 Image Processor");
+					System.out.println("		: - Weight: 262g");
+					System.out.println("Weight		: 262g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: Canon");
+					System.out.println("Camera		: M50");
+					System.out.println("Price		: RM 2949");
+					System.out.println("Features	: - Compact");
+					System.out.println("		: - Easy to use");
+					System.out.println("		: - Built-in Electronic Viewfinder");
+					System.out.println("		: - Fast & Accurate");
+					System.out.println("		: - 24.1Megapixel APS-C CMOS sensor ");
+					System.out.println("		: - DIGIC 8 Image Processor");
+					System.out.println("		: - Weight: 387g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: Canon");
+					System.out.println("Camera		: 90D");
+					System.out.println("Price		: RM 4599");
+					System.out.println("Features	: - Great Image Quality");
+					System.out.println("		: - High-speed Continuous Shooting");
+					System.out.println("		: - Multi-controller Customization");
+					System.out.println("		: - Versatile");
+					System.out.println("		: - 32.5 Megapixel CMOS (APS-C) sensor");
+					System.out.println("		: - DIGIC 8 image processor");
+					System.out.println("		: - Weight: 701g");
+					System.out.println("Type		: DSLR");
+					System.out.println("////////////////////////////////////////////////////////////");
+					break;
+					
+				case 2:
+					
+					System.out.println("************************** NIKON ***************************");
+					System.out.println("////////////////////////////////////////////////////////////");
+					System.out.println("Brand		: Nikon");
+					System.out.println("Camera		: D5600 DX");
+					System.out.println("Price		: RM 2229");
+					System.out.println("Features	: - Exceptional Image Quality");
+					System.out.println("		: - Intuitive Controls");
+					System.out.println("		: - Great Battery Life");
+					System.out.println("		: - SnapBridge");
+					System.out.println("		: - 24.2MP DX format CMOS sensor");
+					System.out.println("		: - Ex peed 4 image processor");
+					System.out.println("		: - Weight: 465g");
+					System.out.println("Type		: DSLR");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: Nikon");
+					System.out.println("Camera		: D750");
+					System.out.println("Price		: RM 5090");
+					System.out.println("Features	: - Vari-angle LCD Display");
+					System.out.println("		: - Compact & Lightweight");
+					System.out.println("		: - Powerful 51-point AF");
+					System.out.println("		: - HD Video Capabilities");
+					System.out.println("		: - 24.3 Megapixel CMOS image sensor");
+					System.out.println("		: - expeed 4 image processor");
+					System.out.println("		: - Weight: 750g");
+					System.out.println("Type		: DSLR");
+					System.out.println("////////////////////////////////////////////////////////////");
+
+					System.out.println("Brand		: Nikon");
+					System.out.println("Camera		: D850");
+					System.out.println("Price		: RM 9099");
+					System.out.println("Features	: - Extraordinary Resolution");
+					System.out.println("		: - Outstanding Battery Performance");
+					System.out.println("		: -Tilting Touchscreen");
+					System.out.println("		: - Outstanding Dynamic Range");
+					System.out.println("		: - 45.7 megapixels of extraordinary resolution");
+					System.out.println("		: - back side illuminated (BSI) full frame image sensor");
+					System.out.println("		: - Weight: 915g");
+					System.out.println("Type		: DSLR");
+					System.out.println("////////////////////////////////////////////////////////////");
+					break;
+					
+				case 3:
+
+					System.out.println("************************ FUJIFILM **************************");
+					System.out.println("////////////////////////////////////////////////////////////");
+					System.out.println("Brand		: FujiFilm");
+					System.out.println("Camera		: X-T30");
+					System.out.println("Price		: RM 3379");
+					System.out.println("Features	: - Great Value for Money");
+					System.out.println("		: - Robust Body");
+					System.out.println("		: - Amazing Autofocus");
+					System.out.println("		: - Excellent Image Quality");
+					System.out.println("		: - Improved Low-Light Perfomance");
+					System.out.println("		: - 26.1MP BSI APS-C X-Trans CMOS 4 image sensor");
+					System.out.println("		: - X-Processor 4 quad-core CPU");
+					System.out.println("Weight		: 383g");
+					System.out.println("Type		: Compact");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: FujiFilm");
+					System.out.println("Camera		: X-A7");
+					System.out.println("Price		: RM 2999");
+					System.out.println("Features	: - Film mode");
+					System.out.println("		: - retro look");
+					System.out.println("		: - HD picture quality");
+					System.out.println("		: - 24.2 Megapixel APS-C CMOS sensor");
+					System.out.println("		: - Weight: 271g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: FujiFilm");
+					System.out.println("Camera		: X100V");
+					System.out.println("Price		: RM 5899");
+					System.out.println("Features	: - Iconic Design");
+					System.out.println("		: - Amazing Lens Quality");
+					System.out.println("		: - Hybrid Viewfinder");
+					System.out.println("		: - Compact size");
+					System.out.println("		: - 26.1MP X-Trans CMOS 4 sensor");
+					System.out.println("		: - X-Processor 4 Image Processor");
+					System.out.println("		: - Weight: 478g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					break;
+					
+				case 4:
+					
+					System.out.println("************************** SONY ****************************");
+					System.out.println("////////////////////////////////////////////////////////////");
+					System.out.println("Brand		: Sony");
+					System.out.println("Camera		: A6000");
+					System.out.println("Price		: RM 2199");
+					System.out.println("Features	: - Hybrid AF");
+					System.out.println("		: - Tilting LCD");
+					System.out.println("		: - Up to 11 FPS Continuous Shooting");
+					System.out.println("		: - Compact");
+					System.out.println("		: - 24.2MP full frame image sensor");
+					System.out.println("		: - BIONZ X Image Processor");
+					System.out.println("		: - Weight: 344g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+
+					System.out.println("Brand		: Sony");
+					System.out.println("Camera		: A6000");
+					System.out.println("Price		: RM 2199");
+					System.out.println("Features	: - Hybrid AF");
+					System.out.println("		: - Tilting LCD");
+					System.out.println("		: - Up to 11 FPS Continuous Shooting");
+					System.out.println("		: - Compact");
+					System.out.println("		: - 24.2MP full frame image sensor");
+					System.out.println("		: - BIONZ X Image Processor");
+					System.out.println("		: - Weight: 344g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: Sony");
+					System.out.println("Camera		: A6400");
+					System.out.println("Price		: RM 3899");
+					System.out.println("Features	: - Tracking focus");
+					System.out.println("		: - Metal body");
+					System.out.println("		: - strong battery life");
+					System.out.println("		: - 24MP APS-C sensor");
+					System.out.println("		: - New Bionz X processor");
+					System.out.println("		: - Weight: 396g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+
+					System.out.println("Brand		: Sony");
+					System.out.println("Camera		: A7 III");
+					System.out.println("Price		: RM 8588.90");
+					System.out.println("Features	: - AF supports A-mount Lenses");
+					System.out.println("		: - New Sensor, Evolved Processor");
+					System.out.println("		: - Continuous Shooting");
+					System.out.println("		: - 693 Phase-detection");
+					System.out.println("		: - Advanced 24.2MP BSI full frame Image Sensor w/ 1.8X readout speed");
+					System.out.println("		: - BIONZ X Image Processor ");
+					System.out.println("		: - Weight: 650g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					break;
+					
+				case 5:
+				
+					System.out.println("************************** LEICA ***************************");
+					System.out.println("////////////////////////////////////////////////////////////");
+					System.out.println("Brand		: Leica");
+					System.out.println("Camera		: Q2");
+					System.out.println("Price		: RM 25260");
+					System.out.println("Features	: - Ultimate Image Quality");
+					System.out.println("		: - Beautiful Design");
+					System.out.println("		: - Best EVF/Screen");
+					System.out.println("		: - 47.3 Megapixel full frame sensor");
+					System.out.println("Weight		: 718g");
+					System.out.println("Type		: Compact");
+					System.out.println("////////////////////////////////////////////////////////////");
+
+					System.out.println("Brand		: Leica");
+					System.out.println("Camera		: M10");
+					System.out.println("Price		: RM 27352");
+					System.out.println("Features	: - pared-down physical design");
+					System.out.println("		: - Rear LCD monitor");
+					System.out.println("		: - slimmest camera body");
+					System.out.println("		: - 24MP Full-Frame CMOS Sensor");
+					System.out.println("		: - Leica Maestro II Image Processor");
+					System.out.println("		: - Weight: 660g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					break;
+					
+				default: 
+					System.out.println("Invalid number! Please try again. Thank you~");
+				}
+			
+				break;
+			case 3:
+				System.out.println("--------------Camera's Price---------------");
+				System.out.println("1 RM1500 - RM3000");
+				System.out.println("2 RM3001 - RM5000");
+				System.out.println("3 RM5001 - RM10000");
+				System.out.println("4 More than RM10001");
+				System.out.print("Please select an option: ");
+				priceChoice = scan.nextInt();
+				System.out.println();
+				
+				switch(priceChoice)
+				{
+				case 1:
+					
+					System.out.println("********************* RM1500 ~ RM3000 **********************");
+					System.out.println("////////////////////////////////////////////////////////////");
+					System.out.println("Brand		: Canon");
+					System.out.println("Camera		: G7X_Mark_II");
+					System.out.println("Price		: RM 1779");
+					System.out.println("Features	: - Versatile Zoom Range");
+					System.out.println("		: - Robust Body");
+					System.out.println("		: - Good in LowLight");
+					System.out.println("		: - Great Image Quality");
+					System.out.println("		: - 20.1 Megapixel CMOS sensor ");
+					System.out.println("		: - New DIGIC 7 Imaging Processor");
+					System.out.println("Weight		: 302g");
+					System.out.println("Type		: Compact");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: Canon");
+					System.out.println("Camera		: M200");
+					System.out.println("Price		: RM 1999");
+					System.out.println("Features	: - cost effective");
+					System.out.println("		: - Easy to use");
+					System.out.println("		: - novice camera");
+					System.out.println("		: - 24.1MP APS-C CMOS Sensor");
+					System.out.println("		: - DIGIC 8 Image Processor");
+					System.out.println("		: - Weight: 262g");
+					System.out.println("Weight		: 262g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: Sony");
+					System.out.println("Camera		: A6000");
+					System.out.println("Price		: RM 2199");
+					System.out.println("Features	: - Hybrid AF");
+					System.out.println("		: - Tilting LCD");
+					System.out.println("		: - Up to 11 FPS Continuous Shooting");
+					System.out.println("		: - Compact");
+					System.out.println("		: - 24.2MP full frame image sensor");
+					System.out.println("		: - BIONZ X Image Processor");
+					System.out.println("		: - Weight: 344g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: Nikon");
+					System.out.println("Camera		: D5600 DX");
+					System.out.println("Price		: RM 2229");
+					System.out.println("Features	: - Exceptional Image Quality");
+					System.out.println("		: - Intuitive Controls");
+					System.out.println("		: - Great Battery Life");
+					System.out.println("		: - SnapBridge");
+					System.out.println("		: - 24.2MP DX format CMOS sensor");
+					System.out.println("		: - Ex peed 4 image processor");
+					System.out.println("		: - Weight: 465g");
+					System.out.println("Type		: DSLR");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: Canon");
+					System.out.println("Camera		: M50");
+					System.out.println("Price		: RM 2949");
+					System.out.println("Features	: - Compact");
+					System.out.println("		: - Easy to use");
+					System.out.println("		: - Built-in Electronic Viewfinder");
+					System.out.println("		: - Fast & Accurate");
+					System.out.println("		: - 24.1Megapixel APS-C CMOS sensor ");
+					System.out.println("		: - DIGIC 8 Image Processor");
+					System.out.println("		: - Weight: 387g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: FujiFilm");
+					System.out.println("Camera		: X-A7");
+					System.out.println("Price		: RM 2999");
+					System.out.println("Features	: - Film mode");
+					System.out.println("		: - retro look");
+					System.out.println("		: - HD picture quality");
+					System.out.println("		: - 24.2 Megapixel APS-C CMOS sensor");
+					System.out.println("		: - Weight: 271g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					break;
+					
+				case 2:
+					
+					System.out.println("********************* RM3001 ~ RM5000 **********************");
+					System.out.println("////////////////////////////////////////////////////////////");
+					System.out.println("Brand		: FujiFilm");
+					System.out.println("Camera		: X-T30");
+					System.out.println("Price		: RM 3379");
+					System.out.println("Features	: - Great Value for Money");
+					System.out.println("		: - Robust Body");
+					System.out.println("		: - Amazing Autofocus");
+					System.out.println("		: - Excellent Image Quality");
+					System.out.println("		: - Improved Low-Light Perfomance");
+					System.out.println("		: - 26.1MP BSI APS-C X-Trans CMOS 4 image sensor");
+					System.out.println("		: - X-Processor 4 quad-core CPU");
+					System.out.println("Weight		: 383g");
+					System.out.println("Type		: Compact");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: Sony");
+					System.out.println("Camera		: A6400");
+					System.out.println("Price		: RM 3899");
+					System.out.println("Features	: - Tracking focus");
+					System.out.println("		: - Metal body");
+					System.out.println("		: - strong battery life");
+					System.out.println("		: - 24MP APS-C sensor");
+					System.out.println("		: - New Bionz X processor");
+					System.out.println("		: - Weight: 396g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: Canon");
+					System.out.println("Camera		: 90D");
+					System.out.println("Price		: RM 4599");
+					System.out.println("Features	: - Great Image Quality");
+					System.out.println("		: - High-speed Continuous Shooting");
+					System.out.println("		: - Multi-controller Customization");
+					System.out.println("		: - Versatile");
+					System.out.println("		: - 32.5 Megapixel CMOS (APS-C) sensor");
+					System.out.println("		: - DIGIC 8 image processor");
+					System.out.println("		: - Weight: 701g");
+					System.out.println("Type		: DSLR");
+					System.out.println("////////////////////////////////////////////////////////////");
+					break;
+
+				case 3:
+				
+					System.out.println("********************* RM5001 ~ RM10000 *********************");
+					System.out.println("////////////////////////////////////////////////////////////");
+					System.out.println("Brand		: Nikon");
+					System.out.println("Camera		: D750");
+					System.out.println("Price		: RM 5090");
+					System.out.println("Features	: - Vari-angle LCD Display");
+					System.out.println("		: - Compact & Lightweight");
+					System.out.println("		: - Powerful 51-point AF");
+					System.out.println("		: - HD Video Capabilities");
+					System.out.println("		: - 24.3 Megapixel CMOS image sensor");
+					System.out.println("		: - expeed 4 image processor");
+					System.out.println("		: - Weight: 750g");
+					System.out.println("Type		: DSLR");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: FujiFilm");
+					System.out.println("Camera		: X100V");
+					System.out.println("Price		: RM 5899");
+					System.out.println("Features	: - Iconic Design");
+					System.out.println("		: - Amazing Lens Quality");
+					System.out.println("		: - Hybrid Viewfinder");
+					System.out.println("		: - Compact size");
+					System.out.println("		: - 26.1MP X-Trans CMOS 4 sensor");
+					System.out.println("		: - X-Processor 4 Image Processor");
+					System.out.println("		: - Weight: 478g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					
+					System.out.println("Brand		: Sony");
+					System.out.println("Camera		: A7 III");
+					System.out.println("Price		: RM 8588.90");
+					System.out.println("Features	: - AF supports A-mount Lenses");
+					System.out.println("		: - New Sensor, Evolved Processor");
+					System.out.println("		: - Continuous Shooting");
+					System.out.println("		: - 693 Phase-detection");
+					System.out.println("		: - Advanced 24.2MP BSI full frame Image Sensor w/ 1.8X readout speed");
+					System.out.println("		: - BIONZ X Image Processor ");
+					System.out.println("		: - Weight: 650g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+
+					System.out.println("Brand		: Nikon");
+					System.out.println("Camera		: D850");
+					System.out.println("Price		: RM 9099");
+					System.out.println("Features	: - Extraordinary Resolution");
+					System.out.println("		: - Outstanding Battery Performance");
+					System.out.println("		: -Tilting Touchscreen");
+					System.out.println("		: - Outstanding Dynamic Range");
+					System.out.println("		: - 45.7 megapixels of extraordinary resolution");
+					System.out.println("		: - back side illuminated (BSI) full frame image sensor");
+					System.out.println("		: - Weight: 915g");
+					System.out.println("Type		: DSLR");
+					System.out.println("////////////////////////////////////////////////////////////");
+					break;
+					
+				case 4:
+					;
+					System.out.println("******************** More than RM10001 *********************");
+					System.out.println("////////////////////////////////////////////////////////////");
+					System.out.println("************ LEICA **************");
+					System.out.println("Brand		: Leica");
+					System.out.println("Camera		: Q2");
+					System.out.println("Price		: RM 25260");
+					System.out.println("Features	: - Ultimate Image Quality");
+					System.out.println("		: - Beautiful Design");
+					System.out.println("		: - Best EVF/Screen");
+					System.out.println("		: - 47.3 Megapixel full frame sensor");
+					System.out.println("Weight		: 718g");
+					System.out.println("Type		: Compact");
+					System.out.println("////////////////////////////////////////////////////////////");
+
+					System.out.println("Brand		: Leica");
+					System.out.println("Camera		: M10");
+					System.out.println("Price		: RM 27352");
+					System.out.println("Features	: - pared-down physical design");
+					System.out.println("		: - Rear LCD monitor");
+					System.out.println("		: - slimmest camera body");
+					System.out.println("		: - 24MP Full-Frame CMOS Sensor");
+					System.out.println("		: - Leica Maestro II Image Processor");
+					System.out.println("		: - Weight: 660g");
+					System.out.println("Type		: Mirrorless");
+					System.out.println("////////////////////////////////////////////////////////////");
+					break;
+					
+				default: 
+					System.out.println("Invalid number! Please try again. Thank you~");
+				}
+				break;
+			}
+			break;
+		case 2:
+			
+			System.out.println("===================ACCESSORIES=============================PRICE========");
+			System.out.println("1. Memory Card SanDisk Extreme 32GB 90 Mb/s Card	: RM 32.90");
+			System.out.println("2. Memory Card SanDisk Extreme 64GB 90 Mb/s Card	: RM 61.90");
+			System.out.println("3. Memory Card SanDisk Extreme 128GB 90 Mb/s Card	: RM 119.00");
+			System.out.println("4. Tripod						: RM 75.50");
+			System.out.println("5. Battery						: RM 99.00");
+			System.out.println("6. Camera Strap						: RM 39.90");
+			System.out.println("7. Camera Bag						: RM 79.90");
+			System.out.println("8. Cleaning Kit						: RM 30.90");
+			System.out.println("9. Wide Angle Lens(24mm-35mm)				: RM 249.00");
+			System.out.println("10. Standard Lens(35mm-85mm)				: RM 349.00");
+			System.out.println("11. Short Telephoto Lens(85mm-200mm)			: RM 549.00");
+			System.out.println("========================================================================");
+			break;
+			
+		case 3:
+			System.out.println("===========DELIVERY FEE==================PRICE=========");
+			System.out.println("	West Malaysia 		||	RM 6.90	");
+			System.out.println(" 	East MAlaysia		||	RM 11.90");
+			System.out.println(" 	Overseas		||	RM 20.90");
+			System.out.println("	Electronics Protection 	||	RM 150.20");
+			System.out.println("=======================================================");
+			System.out.println();
+		
+			System.out.println("=======ADD-ON WARRANTY====================PRICE========");
+			System.out.println("	  1 Year		||	  RM 50");
+			System.out.println("   	  2 Years		||	  RM 110");
+			System.out.println("   	  3 Years		||	  RM 150");
+			System.out.println("=======================================================");
+			System.out.println("# Manufacturer warranty --> 1 year");
+			System.out.println();
+			break;
+			
+		case 4:
+
+			System.out.println("================== GIFT & DISCOUNT ====================");
+			System.out.println();
+			System.out.println("1. Camera price exceed RM 2000");
+			System.out.println(" - 32GB Memory Card");
+			System.out.println(" - Camera Strap");
+			System.out.println(" - 10% Discount for other Accessories");
+			System.out.println();
+		
+			System.out.println("2. Camera price exceed RM 3500");
+			System.out.println(" - 32GB Memory Card");
+			System.out.println(" - Camera Strap");
+			System.out.println(" - Camera Bag");
+			System.out.println(" - Cleaning Kit");
+			System.out.println(" - 15% Discount for other Accessories");
+			System.out.println();
+		
+			System.out.println("3. Camera price exceed RM 5000");
+			System.out.println(" - 32GB Memory Card");
+			System.out.println(" - Camera Strap");
+			System.out.println(" - Camera Bag");
+			System.out.println(" - Cleaning Kit");
+			System.out.println(" - Tripod");
+			System.out.println(" - Battery");
+			System.out.println(" - 20% Discount for other Accessories");
+			System.out.println("=======================================================");
+			break;
+		
+		case 5:
+			
+			System.out.println("=====================PRICE LISTS=====================");
+			System.out.println("   Camera                                Price");
+			System.out.println("-------------------------------------------------");
+			System.out.println("1. Canon G7X Mark II                   : RM 1779");
+			System.out.println("2. Canon M200                          : RM 1999");
+			System.out.println("3. Sony A6000                          : RM 2199");
+			System.out.println("4. Nikon D5600 DX                      : RM 2229");
+			System.out.println("5. Canon M50                           : RM 2949");
+			System.out.println("6. FujiFilm X-A7                       : RM 2999");
+			System.out.println("7. FujiFilm X-T30                      : RM 3379");
+			System.out.println("8. Sony A6400                          : RM 3899");
+			System.out.println("9. Canon 90D                           : RM 4599");
+			System.out.println("10. Nikon D750                         : RM 5090");
+			System.out.println("11. FujiFilm X100V                     : RM 5899");
+			System.out.println("12. Sony A7 III                        : RM 8588.90");
+			System.out.println("13. Nikon D850                         : RM 9099");
+			System.out.println("14. Leica Q2                           : RM 25260");
+			System.out.println("15. Leica M10                          : RM 27352");
+			System.out.println("=====================================================");
+			System.out.println("   Accessories                           Price");
+			System.out.println("-----------------------------------------------------");
+			System.out.println("1. Memory Card SanDisk Extreme 32GB    : RM 32.90");
+			System.out.println("2. Memory Card SanDisk Extreme 64GB    : RM 61.90");
+			System.out.println("3. Memory Card SanDisk Extreme 128GB   : RM 119.00");
+			System.out.println("4. Tripod                              : RM 75.50");
+			System.out.println("5. Battery                             : RM 99.00");
+			System.out.println("6. Camera Strap                        : RM 39.90");
+			System.out.println("7. Camera Bag                          : RM 79.90");
+			System.out.println("8. Cleaning Kit                        : RM 30.90");
+			System.out.println("9. Wide Angle Lens(24mm-35mm)          : RM 249.00");
+			System.out.println("10. Standard Lens(35mm-85mm)           : RM 349.00");
+			System.out.println("11. Short Telephoto Lens(85mm-200mm)   : RM 549.00");
+			System.out.println("=====================================================");
+			System.out.println("   Delivery Fee                          Price ");
+			System.out.println("-----------------------------------------------------");
+			System.out.println("1. West Malaysia                         RM 6.90	");
+			System.out.println("2. East MAlaysia                         RM 11.90");
+			System.out.println("3. Overseas                              RM 20.90");
+			System.out.println("   Electronics Protection                RM 150.20");
+			System.out.println("=====================================================");		
+			System.out.println("   Add-On Warranty                       Price   ");
+			System.out.println("-----------------------------------------------------");
+			System.out.println("1. 1 Year                                RM 50");
+			System.out.println("2. 2 Years                               RM 110");
+			System.out.println("3. 3 Years                               RM 150");
+			System.out.println("=====================================================");
+			System.out.println("# Manufacturer warranty --> 1 year");
+			System.out.println();
+			
+			System.out.println("Please choose the products you want according to the list~");
+			System.out.println();
+			System.out.print("Do you wants to buy a camera?(Y/N) : ");
+			buyCam = scan.next().charAt(0);
+			if (buyCam=='Y'|| buyCam=='y')
+			{
+				System.out.print("Please enter the code number of camera you want to buy(1-15): ");
+				camC  = scan.nextInt();
+				
+				if (camC == 1)
+				{
+					camera = "Canon G7X Mark II";
+					priceCam = 1779;
+				}
+				else if (camC == 2)
+				{
+					camera = "Canon M200";
+					priceCam = 1999;
+				}
+				else if (camC == 3)
+				{
+					camera = "Sony A6000";
+					priceCam = 2199;
+				}
+				else if (camC == 4)
+				{
+					camera = "Nikon D5600 DX";
+					priceCam = 2229;
+				}		
+				else if (camC == 5)
+				{
+					camera = "Canon M50";
+					priceCam = 2949;
+				}
+				else if (camC == 6)
+				{
+					camera = "FujiFilm X-A7";
+					priceCam = 2999;
+				}
+				else if (camC == 7)
+				{
+					camera = "FujiFilm X-T30";
+					priceCam = 3379;
+				}
+				else if (camC == 8)
+				{
+					camera = "Sony A6400";
+					priceCam = 3899;
+				}	
+				else if (camC == 9)
+				{
+					camera = "Canon 90D";
+					priceCam = 4599;
+				}
+				else if (camC == 10)
+				{
+					camera = "Nikon D750";
+					priceCam = 5090;
+				}
+				else if (camC == 11)
+				{
+					camera = "FujiFilm X100V";
+					priceCam = 5899;
+				}
+				else if (camC == 12)
+				{
+					camera = "Sony A7 III";
+					priceCam = 8588.9;
+				}
+				else if (camC == 13)
+				{
+					camera = "Nikon D850";
+					priceCam = 9099;
+				}
+				else if (camC == 14)
+				{
+					camera = "Leica Q2";
+					priceCam = 25260;
+				}
+				else if (camC == 15)
+				{
+					camera = "Leica M10";
+					priceCam = 27352;
+				}	
+				System.out.println("Camera: "+camera);
+				System.out.printf("Price: RM%.2f\n", priceCam);
+				System.out.println();
+			}
+
+				
+			System.out.print("Do you wants to buy an accessories?(Y/N) : ");
+			buyAcs = scan.next().charAt(0);
+				
+			if (buyAcs == 'Y' || buyAcs=='y')
+			{
+				System.out.print("Please enter the code number of accessories you want to buy(1-11): ");
+				acsC  = scan.nextInt();
+				
+				if (acsC == 1)
+				{
+					acs = "Memory Card SanDisk Extreme 32GB";
+					priceAcs = 32.9;
+				}
+				else if (acsC == 2)
+				{
+					acs = "Memory Card SanDisk Extreme 64GB";
+					priceAcs = 61.9;
+				}
+				else if (acsC == 3)
+				{
+					acs = "Memory Card SanDisk Extreme 128GB";
+					priceAcs = 119;
+				}
+				else if (acsC == 4)
+				{
+					acs = "Tripod";
+					priceAcs = 75.5;
+				}
+				else if (acsC == 5)
+				{
+					acs = "Battery";
+					priceAcs = 99;
+				}
+				else if (acsC == 6)
+				{
+					acs = "Camera Strap";
+					priceAcs = 39.9;
+				}
+				else if (acsC == 7)
+				{
+					acs = "Camera Bag";
+					priceAcs = 79.9;
+				}
+				else if (acsC == 8)
+				{
+					acs = "Cleaning Kit";
+					priceAcs = 30.9;
+				}
+				else if (acsC == 9)
+				{
+					acs = "Wide Angle Lens(24mm-35mm)";
+					priceAcs = 249;
+				}
+				else if (acsC == 10)
+				{
+					acs = "Standard Lens(35mm-85mm)";
+					priceAcs = 349;
+				}
+				else if (acsC == 11)
+				{
+					acs = "Short Telephoto Lens(85mm-200mm)";
+					priceAcs = 549;
+				}
+				System.out.println("Accessories: "+acs);
+				System.out.printf("Price: RM%.2f\n", priceAcs);
+				System.out.println();
+			}
+			
+			
+			System.out.print("Please enter the code number of delivery you prefer(1-3):");
+			deliC = scan.nextInt();
+			
+			if (deliC == 1)
+			{
+				deliveryTo = "West Malaysia";
+				deliveryFee = 6.9;
+			}
+			else if(deliC == 2)
+			{
+				deliveryTo = "East Malaysia";
+				deliveryFee = 11.9;
+			}
+			else if(deliC == 3)
+			{
+				deliveryTo = "Overseas";
+				deliveryFee = 20.9;
+			}
+			System.out.println("Delivery Type: "+ deliveryTo);
+			System.out.printf("Delivery Fee: RM%.2f\n", deliveryFee);
+			System.out.println();
+			
+			System.out.print("Do you want to add-on Electronics Protection?(Y/N): ");
+			protectionC = scan.next().charAt(0);
+			
+			if (protectionC == 'Y' || protectionC == 'y')
+				protectionFee = 150.20;
+			else
+				protectionFee = 0;
+			
+			System.out.printf("Protection Fee: RM%.2f\n", protectionFee);
+			System.out.println();
+			
+			System.out.print("Add-on Warranty (Years) max=3	: ");
+			warranty = scan.nextInt();
+			
+			if (warranty == 0)
+				priceWty =0;
+			else if (warranty == 1)
+				priceWty = 50;
+			else if (warranty == 2)
+			{	
+				priceWty = 110;
+				System.out.println("Warranty: "+ warranty + "years");
+				System.out.printf("Warranty Fee: RM%.2f", priceWty);
+			}
+			else if (warranty == 3)
+				priceWty = 150;
+			else
+			{
+				System.out.println("Sorry~ The warranty can only add-on for 3 years in maximum");
+				System.out.println("Please try again~");
+			}
+			
+			
+			if (priceCam > 2000)
+				discount = 10;
+			else if (priceCam > 3500)
+				discount = 15;
+			else if (priceCam > 5000)
+				discount = 20;
+			
+		
+			total = priceCam + deliveryFee + protectionFee + priceWty + priceAcs*((100-discount)/100);
+			
+			System.out.println("");
+			System.out.println("_____________________________________________________________________");
+			System.out.println("                  WELCOME TO THE SHOTKIT SHOP ^.^                    ");
+			System.out.println("                             INVOICE                                 ");
+			System.out.println("_____________________________________________________________________");
+			System.out.println("SHOTKIT SHOP" + "					" +java.time.LocalDate.now());
+			System.out.println("06-2862660");
+			System.out.println("shotkit@gmail.com");
+			System.out.println("");
+			System.out.println("Mr/Mrs " +name);
+			System.out.println(hpNum);
+			System.out.println(email);
+			System.out.println();
+			System.out.println("Camera                                        : "+ camera);
+			System.out.println("Add-on Accessories                            : "+acs);
+			System.out.println("Add-on Warranty                               : "+warranty + "years");
+			System.out.println();
+			
+			System.out.printf("Camera Price                                  : RM %.2f\n", priceCam);
+			System.out.printf("Accessories's Price                           : RM %.2f\n", priceAcs);
+			System.out.println("Discount for add-on accessories               : " + discount +"%");
+			System.out.println();
+			System.out.printf("Delivery Fee                                  : RM %.2f\n", deliveryFee);
+			System.out.printf("Electronics Protection Fee                    : RM %.2f\n", protectionFee);
+			System.out.printf("Warranty Price                                : RM %.2f\n", priceWty);
+			System.out.println("_____________________________________________________________________");
+			System.out.printf("Total                                         : RM %.2f\n", total);
+			System.out.println("_____________________________________________________________________");
+		
+			System.out.println();
+			System.out.println("Thank you very much! See you again ~");
+			break;
+		
+		case 6: 
+			System.out.println("Thank you very much! See you again ~");
+			break;
+			
+		default: 
+			System.out.println("Please enter the number between 1 - 6 ~ Thank you");
+		}
+		
+		
+	}
+
+}
 
 
 
